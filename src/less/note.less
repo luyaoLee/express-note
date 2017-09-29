@@ -1,0 +1,73 @@
+.note {
+    position: absolute;
+    color: #333;
+    width: 220px;
+    margin: 20px 12px;
+    transition: .5s;
+    text-align: justify;
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0,0,0,.2), 0 4px 16px rgba(0,0,0,.19);
+    }
+    &:hover .delete {
+        opacity: 1;
+    }
+    .note-head {
+        height: 20px;
+        cursor: move;
+        background-color: rgba(255,255,255, .9);
+        &:before {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            content: ' ';
+            display: block;
+            width: 86px;
+            height: 30px;
+            background: url(../img/stick3.png) 0 0 no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .note-ct {
+        padding: 10px;
+        min-height: 65px;
+        background-color: rgba(255,255,255, .9);
+        outline: none;
+        line-height: 1.45em;
+    }
+
+    .delete {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        font-size: 20px;
+        color: #000;
+        cursor: pointer;
+        opacity: 0;
+        transition: .5s;
+        &:hover {
+            transform: rotate(90deg);
+        }
+    }
+
+    .time {
+        font-size: 12px;
+        color: #666;
+        text-align: right;
+        padding-right: 10px;
+        background-color: #eee;
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+    .username {
+        text-align: right;
+        padding-right: 10px;
+        background-color: #eee;
+    }
+}
+
+.draggable {
+    opacity: 0.8;
+    cursor: move;
+    transition: none;
+}

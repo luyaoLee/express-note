@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>U-Note</title>
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="header">
+        <a href="javascript:;" class="iconfont add-note"> 添加</a>
+        <ul class="user-area">
+            <% if (isLogin){ %>
+                <li><img src="<%= user.avatar %>" alt="用户头像"></li>
+                <li><span><%= user.username %></span></li>
+                <li><span class="line"> | </span> </li>
+                <li><a class="logout" href="/auth/logout">注销</a></li>
+                <%} else { %>
+                    <li><a class="login" title="GitHub登录" href="/auth/github"><span class="iconfont icon-github"></span> 登录</a>
+                    </li>
+                    <% } %>
+        </ul>
+    </div>
+    <div id="content"></div>
+    <script src="./js/index.bundle.js"></script>
+</body>
+
+</html>
