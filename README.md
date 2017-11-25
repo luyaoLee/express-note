@@ -28,5 +28,72 @@ npm start
 - pm2
 - linux命令
 
+## 目录结构
+```
+│  .gitignore
+│  app.js
+│  package.json
+│  process.json
+│  README.md
+│  
+├─bin
+│      www
+│      
+├─database
+│      database.sqlite
+│      
+├─model
+│      noteModel.js
+│      
+├─public
+│  ├─css
+│  │      index.css
+│  │      
+│  ├─img
+│  │      background.jpg
+│  │      favicon.ico
+│  │      
+│  └─js
+│          index.bundle.js
+│          
+├─routes
+│      api.js
+│      auth.js
+│      index.js
+│      
+├─src
+│  │  postcss.config.js
+│  │  webpack.config.js
+│  │  
+│  ├─img
+│  │      background.jpg
+│  │      stick.png
+│  │      stick1.png
+│  │      stick2.png
+│  │      stick3.png
+│  │      
+│  ├─js
+│  │  ├─app
+│  │  │      index.js
+│  │  │      
+│  │  ├─lib
+│  │  │      jquery-2.0.3.min.js
+│  │  │      
+│  │  └─mod
+│  │          event.js
+│  │          note-manager.js
+│  │          note.js
+│  │          toast.js
+│  │          waterfall.js
+│  │          
+│  └─less
+│          index.less
+│          note.less
+│          toast.less
+│          
+└─views
+        error.ejs
+        index.ejs
+```
 ## 其它
 - 功能还需完善，增加便签的样式、增加QQ、微信登录等

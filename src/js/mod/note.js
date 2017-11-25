@@ -70,10 +70,10 @@ var Note = (function() {
 
             //contenteditable没有 change 事件，所有这里通过判断元素内容变动来模拟
             $noteCt.on('focus', function() {
+                $noteCt.data('before', $noteCt.html());
                 if ($noteCt.html() == 'Input something here...') {
                     $noteCt.html('');
                 }
-                $noteCt.data('before', $noteCt.html());
             }).on('blur paste', function() {
                 if ($noteCt.html() != $noteCt.data('before')) {
                     $noteCt.data('before', $noteCt.html());

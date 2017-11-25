@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
         loginData = {
             isLogin: false
         }
-    }
+    } 
   res.render('index', loginData);
 });
 
